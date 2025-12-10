@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Navbar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        html {
+    scroll-behavior: smooth;
+  }
+      body {
+        font-family: "Crimson Text", serif;
+      }
+
+      @keyframes slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-slider {
+  animation: slide 10s linear infinite;
+}
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.4s ease forwards;
+  }
+  @keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleFade {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1.3s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-scale-fade {
+  animation: scaleFade 1.4s ease-out forwards;
+}
+    </style>
+  </head>
+
+  <body class="bg-white">
+<header class="flex  items-center shadow-xl justify-between px-6 md:px-10 py-5 sticky top-0 bg-white z-50">
+  <h1 class="text-2xl md:text-3xl font-semibold">Area</h1>
+
+
+ <nav class="hidden md:block">
+  <ul class="flex space-x-7 text-lg font-medium text-gray-700">
+    
+    <li>
+      <a href="#benefits" class="hover:text-[#485C11] transition-all cursor-pointer">
+        Benefits
+      </a>
+    </li>
+
+    <li>
+      <a href="#specifications" class="hover:text-[#485C11] transition-all cursor-pointer">
+        Specifications
+      </a>
+    </li>
+
+    <li>
+      <a href="#howto" class="hover:text-[#485C11] transition-all cursor-pointer">
+        How-to
+      </a>
+    </li>
+
+    <li>
+      <a href="#contact" class="hover:text-[#485C11] transition-all cursor-pointer">
+        Contact Us
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+
+  <button class="hidden md:block bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+    Learn More
+  </button>
+
+  <button id="menuBtn" class="md:hidden text-3xl focus:outline-none">
+    ☰
+  </button>
+</header>
+
+
+<div id="mobileMenu" class="hidden flex flex-col bg-white shadow-lg border-t px-6 py-6 space-y-6 text-lg font-medium text-gray-700 animate-slideDown">
+  <a class="hover:text-[#485C11] transition cursor-pointer">Benefits</a>
+  <a class="hover:text-[#485C11] transition cursor-pointer">Specifications</a>
+  <a class="hover:text-[#485C11] transition cursor-pointer">How-to</a>
+  <a class="hover:text-[#485C11] transition cursor-pointer">Contact Us</a>
+
+  <button class="bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+    Learn More
+  </button>
+</div>
+
+
+<h1 class="text-4xl sm:text-6xl md:text-8xl text-center pt-8 md:pt-16 px-4 font-bold transition-all duration-500 hover:scale-90 hover:text-[#8E9C78]">
+  Browse everything.
+</h1>
+
+ <div class="relative mt-10 md:mt-20 w-full max-w-[907px] m-auto px-4 md:px-0 rounded-xl animate-fade-up">
+  
+  <!-- Hidden on small devices, visible from sm and above -->
+  <div
+    class="hidden sm:block absolute top-auto left-1/2 -translate-x-1/2 bottom-0 inset-0 
+    w-full max-w-[1200px] md:w-[1900px] 
+    h-[200px] sm:h-[280px] md:h-[345px] 
+    bg-[#8E9C78] rounded-[30px] opacity-0 animate-fade-in-delayed"
+  ></div>
+
+  <img 
+    class="relative w-full transition-transform duration-700 hover:scale-105 animate-scale-fade" 
+    src="Ipad.png"
+  />
+
+</div>
+
+
+
+    <div class="mt-10 md:mt-20">
+      <p class="text-base md:text-lg font-medium mx-4 md:mx-8 text-gray-500">Trusted by:</p>
+    </div>
+    
+<div class="overflow-hidden w-full">
+  <div class="flex animate-slider gap-10">
+    <img src="Logo Row.png" class="h-12 md:h-20" />
+    <img src="Logo Row.png" class="h-12 md:h-20" />
+    <!-- <img src="Logo Row.png" class="h-12 md:h-20" />
+    <img src="Logo Row.png" class="h-12 md:h-20" />
+    <img src="Logo Row.png" class="h-12 md:h-20" /> -->
+  </div>
+</div>
+
+    <div class="mt-10 md:mt-20">
+      <p class="text-base md:text-lg font-medium mx-4 md:mx-8 text-[#485C11]">Benefits</p>
+      <p class="text-3xl sm:text-4xl md:text-5xl mx-4 md:mx-8 font-medium mt-5 md:mt-10">We've cracked the code.</p>
+      <p class="text-lg md:text-xl mt-5 md:mt-10 text-gray-500 mx-4 md:mx-8">
+        Area provides real insights, without the data overload.
+      </p>
+    </div>
+    <div class="flex flex-col sm:flex-row  sm:flex-wrap lg:flex-nowrap justify-evenly overflow-hidden px-4">
+      <div class="w-full md:p-10 sm:w-[48%] lg:w-[285px] h-auto mt-10 mt-5">
+        <img src="Cable icon.png" alt="Cable icon" class="w-6 sm:mx-4  transition duration-300 ease-in-out hover:scale-150 mt-10 h-6 mb-3" />
+        <h2 class="text-lg sm:mx-4  font-semibold mb-2 text-gray-800">
+          Amplify Insights
+        </h2>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Unlock data-driven decisions with comprehensive analytics, revealing
+          key opportunities for strategic regional growth.
+        </p>
+      </div>
+      <div class="w-full sm:w-[48%] lg:w-[285px] h-auto mt-10 p-4">
+        <img src="Earth icon.png" alt="Cable icon" class="w-6 transition duration-300 ease-in-out hover:scale-150 mt-10 h-6 mb-3" />
+        <h2 class="text-lg font-semibold mb-2 text-gray-800">
+          Control Your Global Presence
+        </h2>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Manage and track satellite offices, ensuring consistent performance
+          and streamlined operations everywhere.
+        </p>
+      </div>
+
+      <div class="w-full sm:w-[48%] lg:w-[285px] h-auto mt-10 p-4">
+        <img
+          src="Account icon.png"
+          alt="Cable icon"
+          class="w-6 mt-10 h-6 transition duration-300 ease-in-out hover:scale-150 mb-3"
+        />
+        <h2 class="text-lg font-semibold mb-2 text-gray-800">
+          Remove Language Barriers
+        </h2>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Adapt to diverse markets with built-in localization for clear
+          communication and enhanced user experience.
+        </p>
+      </div>
+      <div class="w-full sm:w-[48%] lg:w-[285px] h-auto mt-10 p-4">
+        <img src="Vector.png" alt="Cable icon" class="w-6  mt-10 h-6 mb-3" />
+        <h2 class="text-lg font-semibold mb-2 text-gray-800">
+          Visualize Growth
+        </h2>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Generate precise, visually compelling reports that illustrate your
+          growth trajectories across all regions.
+        </p>
+      </div>
+    </div>
+
+    <img src="Hero Image.png" class="mx-4 md:p-10 ms:p-0 md:mx-20 w-full max-w-[1200px] h-auto" alt="Hero" />
+    <div class="w-full flex flex-col lg:flex-row justify-between items-start px-4 md:px-10 py-10 md:py-20">
+      <div class="w-full lg:w-[50%]">
+        <h1 class="text-4xl sm:text-5xl md:text-[60px] font-[400] leading-tight">
+          See the Big Picture
+        </h1>
+
+        <p class="text-[#6F6F6F] text-sm md:text-[15px] font-[400] mt-6 max-w-[420px]">
+          Area turns your data into clear, vibrant visuals that show you exactly
+          what's happening in each region.
+        </p>
+
+        <div class="mt-10 space-y-6 text-sm md:text-[15px]">
+          <hr />
+          <div class="flex gap-5">
+            <span class="text-gray-400">01</span>
+            <p>Spot Trends in Seconds: No more digging through numbers.</p>
+          </div>
+          <hr />
+          <div class="flex gap-5">
+            <span class="text-gray-400">02</span>
+            <p>
+              Get Everyone on the Same Page: Share easy-to-understand reports
+              with your team.
+            </p>
+          </div>
+          
+          <div class="flex gap-5">
+            <span class="text-gray-400">03</span>
+            <p>
+              Make Presentations Pop: Interactive maps and dashboards keep your
+              audience engaged.
+            </p>
+          </div>
+          <hr />
+          <div class="flex gap-5">
+            <span class="text-gray-400">04</span>
+            <p>
+              Your Global Snapshot: Get a quick, clear overview of your entire
+              operation.
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="mt-10 px-8 hover:bg-[#485C11] transition-colors hover:text-white py-3 bg-[#DDEEC3] rounded-full text-sm font-medium"
+        >
+          Discover More
+        </button>
+      </div>
+
+      <div class="w-full lg:w-[50%] flex justify-center lg:justify-end mt-10 lg:mt-0">
+        <img
+          class="w-full max-w-[590px] shadow-lg shadow-[#DFECC6] overflow-hidden md:mx-20 transition duration-300 ease-in-out hover:scale-110 h-auto object-cover rounded-[40px]"
+          src="Features carousel v1.png"
+          alt=""
+        />
+      </div>
+    </div>
+    
+    <h3 class="text-center mt-10 md:mt-20 text-base md:text-lg">Specs</h3>
+    <h1 class="text-center mt-5 md:mt-10 text-3xl sm:text-4xl md:text-5xl px-4">Why Choose Area?</h1>
+    <p class="text-gray-400 mt-5 md:mt-10 text-center text-sm md:text-base px-4">
+      You need a solution that keeps up. That's why we developed Area. A
+      developer-friendly approach to <br class="hidden md:block" />
+      streamline your business.
+    </p>
+    <button
+      class="mt-10 mx-auto block px-8 hover:bg-[#485C11] transition-colors hover:text-white py-3 bg-[#DDEEC3] rounded-full text-sm font-medium"
+    >
+      Discover More
+    </button>
+  <div class="max-w-6xl mt-10 md:mt-20 mx-4 md:mx-auto bg-white rounded-lg shadow-sm">
+      
+    <div class="grid grid-cols-3 sm:grid-cols-3 border-b-2 border-gray-200">
+        <div class="p-4 md:p-6 shadow-xl bg-gray-50">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900">Area</h2>
+        </div>
+        <div class="p-4 md:p-6 border-t sm:border-t-0 border-l border-gray-200">
+            <h2 class="text-xl md:text-2xl text-gray-400">WebSurge</h2>
+        </div>
+        <div class="p-4 md:p-6 border-t sm:border-t-0 border-l border-gray-200">
+            <h2 class="text-xl md:text-2xl text-gray-400">HyperView</h2>
+        </div>
+    </div>
+
+    <!-- ⭐ FIXED GRID: HyperView moves to NEXT ROW on small devices -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 auto-rows-auto">
+         
+        <!-- AREA COLUMN -->
+        <div class="p-4 md:p-6 shadow-xl space-y-4 md:space-y-8 bg-gray-50 order-1">
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Ultra-fast browsing</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Advanced AI insights</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Seamless integration</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Advanced AI insights</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Ultra-fast browsing</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Full UTF-8 support</span>
+            </div>
+        </div>
+
+        <!-- WEBSURGE COLUMN -->
+        <div class="p-4 md:p-6 space-y-4 md:space-y-8 border-l border-t sm:border-t-0 border-gray-200 order-2">
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Fast browsing</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Basic AI recommendations</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Restricts customization</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Basic AI insights</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Fast browsing</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Potential display errors</span>
+            </div>
+        </div>
+
+        <!-- HYPERVIEW COLUMN → GOES TO NEXT ROW ON SMALL SCREENS -->
+        <div class="p-4 md:p-6 space-y-4 md:space-y-8 border-l border-t sm:border-t-0 border-gray-200 order-3 sm:order-none">
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Moderate speeds</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">No AI assistance</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Steep learning curve</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">No AI assistance</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Moderate speeds</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-700">Partial UTF-8 support</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <section>
+      <div class="w-full flex flex-col lg:flex-row justify-between items-center px-6 md:px-10 py-20 gap-16">
+
+<div class="w-full lg:w-1/2">
+<img class="w-full max-w-[590px] rounded-2xl object-cover shadow-[10px_10px_15px_#adb5bd]" src="Image.png">
+</div>
+
+<div class="w-full lg:w-1/2 flex flex-col">
+<p id="I" class="text-[28px] md:text-[40px] font-[400] leading-tight">
+<span class="text-8xl">“I </span> was skeptical, but Area has completely transformed the way I manage my business.
+The data visualizations are so clear and intuitive, and the platform is so easy to use.
+I can't imagine running my company without it.”
+</p>
+
+<p class="text-[15px] font-[400] mt-10">John Smith</p>
+<p class="text-[12px] font-[400] text-[#485C11] mt-1">Head of Data</p>
+</div>
+
+</div>
+    
+    </section>
+
+
+   <section class="grid grid-cols-1 md:mt-20 md:grid-cols-3 gap-10 px-4">
+
+  <!-- Card 1 -->
+  <div class="text-center">
+    <h1 class="text-4xl text-gray-400">01</h1>
+    <h3 class="font-bold mt-4 text-lg">Get Started</h3>
+    <p class="text-gray-400 mt-3 text-sm">
+      With our intuitive setup, you're up and running in minutes.
+    </p>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="text-center">
+    <h1 class="text-4xl text-gray-400">02</h1>
+    <h3 class="font-bold mt-4 text-lg">Customize and Configure</h3>
+    <p class="text-gray-400 mt-3 text-sm">
+      Adapt Area to your specific requirements and preferences.
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="text-center  ">
+    <h1 class="text-4xl text-gray-400">03</h1>
+    <h3 class="font-bold mt-4 text-lg">Grow Your Business</h3>
+    <p class="text-gray-400 mt-3 text-sm">
+      Make informed decisions to exceed your goals.
+    </p>
+  </div>
+
+</section>
+
+    <img src="Hero image (1).png" class="mx-4  md:mt-20 overflow-hidden md:mx-20 transition duration-300 ease-in-out hover:scale-110 w-full max-w-[1200px] h-auto" alt="" />
+    <section>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl text-center mt-10 px-4">Connect with us</h1>
+      <p class="text-center mt-5 md:mt-10 text-gray-400 text-sm md:text-base px-4">
+        Schedule a quick call to learn how Area can turn your regional data into
+        a powerful <br class="hidden md:block" />
+        advantage.
+      </p>
+
+      <button
+        class="mt-10 mb-14 px-8 md:px-44 py-3 bg-[#485C11] rounded-full text-sm font-medium text-white hover:bg-[#3B4C0E] transition-colors mx-auto block w-auto max-w-[90%]"
+      >
+        Learn More
+      </button>
+    </section>
+    <ul class="flex flex-wrap border-t-[3px] border-gray-100 px-4">
+      <li class="text-xl md:text-xl font-bold mx-2 md:mx-5 mt-5 md:mt-10">Benefits</li>
+      <li class="text-xl md:text-xl font-bold mx-2 md:mx-5 mt-5 md:mt-10">Specifications</li>
+      <li class="text-xl md:text-xl font-bold mx-2 md:mx-5 mt-5 md:mt-10">How-to</li>
+    </ul>
+    <img src="Credits.png" class="mt-10 md:mt-16  w-full  " alt="" />
+  </body>
+  <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+</html>
