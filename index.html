@@ -68,12 +68,31 @@
 .animate-scale-fade {
   animation: scaleFade 1.4s ease-out forwards;
 }
+/* ::shadow */
+   
+    .hover-group:hover .feature-box {
+        opacity: 0.4;
+        transform: scale(0.97);
+        transition: all 0.3s ease;
+    }
+
+   
+    .feature-box:hover {
+        opacity: 1 !important;
+        transform: scale(1.05) !important;
+        z-index: 10;
+    }
+
+
     </style>
   </head>
 
   <body class="bg-white">
+ 
 <header class="flex  items-center shadow-xl justify-between px-6 md:px-10 py-5 sticky top-0 bg-white z-50">
-  <h1 class="text-2xl md:text-3xl font-semibold">Area</h1>
+    
+    <h1 class="text-2xl md:text-3xl font-semibold">Area</h1>
+
 
 
  <nav class="hidden md:block">
@@ -114,8 +133,8 @@
   <button id="menuBtn" class="md:hidden text-3xl focus:outline-none">
     ☰
   </button>
+  
 </header>
-
 
 <div id="mobileMenu" class="hidden flex flex-col bg-white shadow-lg border-t px-6 py-6 space-y-6 text-lg font-medium text-gray-700 animate-slideDown">
   <a class="hover:text-[#485C11] transition cursor-pointer">Benefits</a>
@@ -126,6 +145,7 @@
   <button class="bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
     Learn More
   </button>
+  
 </div>
 
 
@@ -135,7 +155,7 @@
 
  <div class="relative mt-10 md:mt-20 w-full max-w-[907px] m-auto px-4 md:px-0 rounded-xl animate-fade-up">
   
-  <!-- Hidden on small devices, visible from sm and above -->
+
   <div
     class="hidden sm:block absolute top-auto left-1/2 -translate-x-1/2 bottom-0 inset-0 
     w-full max-w-[1200px] md:w-[1900px] 
@@ -158,11 +178,25 @@
     
 <div class="overflow-hidden w-full">
   <div class="flex animate-slider gap-10">
-    <img src="Logo Row.png" class="h-12 md:h-20" />
+    <!-- <img src="Logo Row.png" class="h-12 md:h-20" />
     <img src="Logo Row.png" class="h-12 md:h-20" />
     <!-- <img src="Logo Row.png" class="h-12 md:h-20" />
     <img src="Logo Row.png" class="h-12 md:h-20" />
-    <img src="Logo Row.png" class="h-12 md:h-20" /> -->
+    <img src="Logo Row.png" class="h-12 md:h-20" /> --> -->
+    <img src="Logo 1.png" alt="">
+    <img src="Logo 2.png" alt="">
+    <img src="Logo 3.png" alt="">
+    <img src="Logo 4.png" alt="">
+    <img src="Logo 5.png" alt="">
+    <img src="Logo 6.png" alt="">
+    <img src="Logo 1.png" alt="">
+    <img src="Logo 2.png" alt="">
+    <img src="Logo 3.png" alt="">
+    <img src="Logo 4.png" alt="">
+    <img src="Logo 5.png" alt="">
+    <img src="Logo 6.png" alt="">
+
+
   </div>
 </div>
 
@@ -293,10 +327,10 @@
     >
       Discover More
     </button>
-  <div class="max-w-6xl mt-10 md:mt-20 mx-4 md:mx-auto bg-white rounded-lg shadow-sm">
-      
+ <div class="max-w-6xl mt-10 md:mt-20 mx-4 md:mx-auto bg-white rounded-lg shadow-sm">
+<!-- 
     <div class="grid grid-cols-3 sm:grid-cols-3 border-b-2 border-gray-200">
-        <div class="p-4 md:p-6 shadow-xl bg-gray-50">
+        <div class="p-4 md:p-6 ">
             <h2 class="text-xl md:text-2xl font-bold text-gray-900">Area</h2>
         </div>
         <div class="p-4 md:p-6 border-t sm:border-t-0 border-l border-gray-200">
@@ -305,46 +339,15 @@
         <div class="p-4 md:p-6 border-t sm:border-t-0 border-l border-gray-200">
             <h2 class="text-xl md:text-2xl text-gray-400">HyperView</h2>
         </div>
-    </div>
+    </div> -->
 
-    <!-- ⭐ FIXED GRID: HyperView moves to NEXT ROW on small devices -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 auto-rows-auto">
-         
-        <!-- AREA COLUMN -->
-        <div class="p-4 md:p-6 shadow-xl space-y-4 md:space-y-8 bg-gray-50 order-1">
-            <div class="flex items-center gap-3">
-                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
-                <span class="text-sm md:text-base text-gray-900">Ultra-fast browsing</span>
-            </div>
 
-            <div class="flex items-center gap-3">
-                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
-                <span class="text-sm md:text-base text-gray-900">Advanced AI insights</span>
-            </div>
+    <div class="hover-group grid grid-cols-2 sm:grid-cols-3 auto-rows-auto">
 
-            <div class="flex items-center gap-3">
-                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
-                <span class="text-sm md:text-base text-gray-900">Seamless integration</span>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
-                <span class="text-sm md:text-base text-gray-900">Advanced AI insights</span>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
-                <span class="text-sm md:text-base text-gray-900">Ultra-fast browsing</span>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
-                <span class="text-sm md:text-base text-gray-900">Full UTF-8 support</span>
-            </div>
-        </div>
-
-        <!-- WEBSURGE COLUMN -->
-        <div class="p-4 md:p-6 space-y-4 md:space-y-8 border-l border-t sm:border-t-0 border-gray-200 order-2">
+       
+        <div class="feature-box cursor-pointer transition-all duration-300 p-4 md:p-6 space-y-4 md:space-y-8 border-l border-t sm:border-t-0 border-gray-200 order-2">
+ <h2 class="text-xl md:text-2xl font-bold ">HyperView</h2>
+ <hr>
             <div class="flex items-center gap-3">
                 <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
                 <span class="text-sm md:text-base text-gray-700">Fast browsing</span>
@@ -376,8 +379,11 @@
             </div>
         </div>
 
-        <!-- HYPERVIEW COLUMN → GOES TO NEXT ROW ON SMALL SCREENS -->
-        <div class="p-4 md:p-6 space-y-4 md:space-y-8 border-l border-t sm:border-t-0 border-gray-200 order-3 sm:order-none">
+        <!-- HYPERVIEW COLUMN -->
+         
+        <div class="feature-box cursor-pointer transition-all duration-300 p-4 md:p-6 space-y-4 md:space-y-8 border-l border-t sm:border-t-0 border-gray-200 order-3 sm:order-none">
+ <h2 class="text-xl md:text-2xl font-bold ">Area</h2>
+ <hr>
             <div class="flex items-center gap-3">
                 <img src="Close icon.png" class="w-4 h-4 md:w-5 md:h-5">
                 <span class="text-sm md:text-base text-gray-700">Moderate speeds</span>
@@ -408,9 +414,43 @@
                 <span class="text-sm md:text-base text-gray-700">Partial UTF-8 support</span>
             </div>
         </div>
+   <div class="feature-box cursor-pointer transition-all duration-300 p-4 md:p-6 space-y-4 md:space-y-8 bg-gray-50 order-1">
+ <h1 class="text-xl md:text-2xl font-bold ">WebSurge</h1>
+ <hr>
+            <div class="flex items-center gap-3">
 
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Ultra-fast browsing</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Advanced AI insights</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Seamless integration</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Advanced AI insights</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Ultra-fast browsing</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <img src="Check icon.png" class="w-4 h-4 md:w-5 md:h-5">
+                <span class="text-sm md:text-base text-gray-900">Full UTF-8 support</span>
+            </div>
+        </div>
     </div>
 </div>
+
 
 
     <section>
@@ -488,6 +528,7 @@ I can't imagine running my company without it.”
       <li class="text-xl md:text-xl font-bold mx-2 md:mx-5 mt-5 md:mt-10">How-to</li>
     </ul>
     <img src="Credits.png" class="mt-10 md:mt-16  w-full  " alt="" />
+    </div>
   </body>
   <script>
   const menuBtn = document.getElementById("menuBtn");
