@@ -345,4 +345,6 @@
   }
     body, html {
     overflow-x: hidden !important;
+    margin: 5%;
+    margin-top: 1%;
   }
