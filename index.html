@@ -6,88 +6,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Navbar</title>
+    <link rel="stylesheet" href="Style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-        html {
-    scroll-behavior: smooth;
-  }
-      body {
-        font-family: "Crimson Text", serif;
-      }
-
-      @keyframes slide {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-slider {
-  animation: slide 10s linear infinite;
-}
-  @keyframes slideDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-slideDown {
-    animation: slideDown 0.4s ease forwards;
-  }
-  @keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes scaleFade {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-.animate-fade-up {
-  animation: fadeUp 1.3s ease-out forwards;
-}
-
-.animate-fade-in-delayed {
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-.animate-scale-fade {
-  animation: scaleFade 1.4s ease-out forwards;
-}
-/* ::shadow */
-   
-    .hover-group:hover .feature-box {
-        opacity: 0.4;
-        transform: scale(0.97);
-        transition: all 0.3s ease;
-    }
-
-   
-    .feature-box:hover {
-        opacity: 1 !important;
-        transform: scale(1.05) !important;
-        z-index: 10;
-    }
-
-
-    </style>
+    
   </head>
 
-  <body class="bg-white">
+  <body class="bg-white overflow-x-hidden">
+    
  
 <header class="flex  items-center shadow-xl justify-between px-6 md:px-10 py-5 sticky top-0 bg-white z-50">
     
@@ -126,10 +55,10 @@
 </nav>
 
 
-  <button class="hidden md:block bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+  <!-- <button class="hidden md:block bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
     Learn More
-  </button>
-
+  </button> -->
+<button class="button2 bg-[#DFECC6] hidden md:block  rounded-full text-black">  Learn More</button>
   <button id="menuBtn" class="md:hidden text-3xl focus:outline-none">
     ☰
   </button>
@@ -142,16 +71,18 @@
   <a class="hover:text-[#485C11] transition cursor-pointer">How-to</a>
   <a class="hover:text-[#485C11] transition cursor-pointer">Contact Us</a>
 
-  <button class="bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+ <button class="bg-[#485C11]  text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition transform">
     Learn More
-  </button>
-  
+  </button> 
+  <!-- From Uiverse.io by shah1345 --> 
+
+
 </div>
 
-
-<h1 class="text-4xl sm:text-6xl md:text-8xl text-center pt-8 md:pt-16 px-4 font-bold transition-all duration-500 hover:scale-90 hover:text-[#8E9C78]">
-  Browse everything.
-</h1>
+  <h1 id="floatHeading"
+      class="heading text-4xl sm:text-6xl md:text-8xl text-center pt-8 md:pt-16 px-4 font-bold transition-all duration-500 hover:scale-90 hover:text-[#8E9C78]">
+    Browse everything.
+  </h1>
 
  <div class="relative mt-10 md:mt-20 w-full max-w-[907px] m-auto px-4 md:px-0 rounded-xl animate-fade-up">
   
@@ -176,20 +107,43 @@
       <p class="text-base md:text-lg font-medium mx-4 md:mx-8 text-gray-500">Trusted by:</p>
     </div>
     
-<div class="overflow-hidden w-full">
-  <div class="flex animate-slider gap-10">
-   
-    <img src="Logo 1.png" alt="">
-    <img src="Logo 2.png" alt="">
-    <img src="Logo 3.png" alt="">
-    <img src="Logo 4.png" alt="">
-    <img src="Logo 5.png" alt="">
-    <img src="Logo 6.png" alt="">
 
+  <div class="w-full flex justify-center">
+    <div class="slider-window slider overflow-hidden bg-white rounded-xl shadow-sm py-6">
+      
+      <!-- TRACK: contains TWO IDENTICAL SETS for the infinite loop -->
+      <div class="slider-track">
 
+        <!-- ======= FIRST SET ======= -->
+        <div class="flex gap-10  items-center">
+          <div class="logo text-gray-800"><img src="Logo 1.png" alt="Logo 1"></div>
+          <div class="logo"><img src="Logo 2.png" alt="Logo 2"></div>
+          <div class="logo"><img src="Logo 3.png" alt="Logo 3"></div>
+          <div class="logo"><img src="Logo 4.png" alt="Logo 4"></div>
+          <div class="logo"><img src="Logo 5.png" alt="Logo 5"></div>
+          <div class="logo"><img src="Logo 6.png" alt="Logo 6"></div>
+        </div>
 
+        <!-- ======= DUPLICATE SET (required for perfect loop) ======= -->
+        <div class="flex gap-10 text-gray-400 items-center">
+          <div class="logo"><img src="Logo 1.png" alt="Logo 1"></div>
+          <div class="logo"><img src="Logo 2.png" alt="Logo 2"></div>
+          <div class="logo"><img src="Logo 3.png" alt="Logo 3"></div>
+          <div class="logo"><img src="Logo 4.png" alt="Logo 4"></div>
+          <div class="logo"><img src="Logo 5.png" alt="Logo 5"></div>
+          <div class="logo"><img src="Logo 6.png" alt="Logo 6"></div>
+        </div>
+     <div class="flex gap-10 text-gray-400 items-center">
+          <div class="logo"><img src="Logo 1.png" alt="Logo 1"></div>
+          <div class="logo"><img src="Logo 2.png" alt="Logo 2"></div>
+          <div class="logo"><img src="Logo 3.png" alt="Logo 3"></div>
+          <div class="logo"><img src="Logo 4.png" alt="Logo 4"></div>
+          <div class="logo"><img src="Logo 5.png" alt="Logo 5"></div>
+          <div class="logo"><img src="Logo 6.png" alt="Logo 6"></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
     <div class="mt-10 md:mt-20">
       <p class="text-base md:text-lg font-medium mx-4 md:mx-8 text-[#485C11]">Benefits</p>
@@ -198,104 +152,121 @@
         Area provides real insights, without the data overload.
       </p>
     </div>
-    <div class="flex flex-col sm:flex-row  sm:flex-wrap lg:flex-nowrap justify-evenly overflow-hidden px-4">
-      <div class="w-full md:p-10 sm:w-[48%] lg:w-[285px] h-auto mt-10 mt-5">
-        <img src="Cable icon.png" alt="Cable icon" class="w-6 sm:mx-4  transition duration-300 ease-in-out hover:scale-150 mt-10 h-6 mb-3" />
-        <h2 class="text-lg sm:mx-4  font-semibold mb-2 text-gray-800">
-          Amplify Insights
-        </h2>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Unlock data-driven decisions with comprehensive analytics, revealing
-          key opportunities for strategic regional growth.
-        </p>
-      </div>
-      <div class="w-full sm:w-[48%] lg:w-[285px] h-auto mt-10 p-4">
-        <img src="Earth icon.png" alt="Cable icon" class="w-6 transition duration-300 ease-in-out hover:scale-150 mt-10 h-6 mb-3" />
-        <h2 class="text-lg font-semibold mb-2 text-gray-800">
-          Control Your Global Presence
-        </h2>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Manage and track satellite offices, ensuring consistent performance
-          and streamlined operations everywhere.
-        </p>
-      </div>
+   
 
-      <div class="w-full sm:w-[48%] lg:w-[285px] h-auto mt-10 p-4">
-        <img
-          src="Account icon.png"
-          alt="Cable icon"
-          class="w-6 mt-10 h-6 transition duration-300 ease-in-out hover:scale-150 mb-3"
-        />
-        <h2 class="text-lg font-semibold mb-2 text-gray-800">
-          Remove Language Barriers
-        </h2>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Adapt to diverse markets with built-in localization for clear
-          communication and enhanced user experience.
-        </p>
-      </div>
-      <div class="w-full sm:w-[48%] lg:w-[285px] h-auto mt-10 p-4">
-        <img src="Vector.png" alt="Cable icon" class="w-6  mt-10 h-6 mb-3" />
-        <h2 class="text-lg font-semibold mb-2 text-gray-800">
-          Visualize Growth
-        </h2>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Generate precise, visually compelling reports that illustrate your
-          growth trajectories across all regions.
-        </p>
-      </div>
-    </div>
+   <div class="w-full overflow-x-hidden">
+  <img 
+    src="Hero Image.png" 
+    class="mx-2 sm:mx-0 md:mx-20 md:p-10 w-full h-auto max-w-full object-contain"
+    alt="Hero"
+  />
+</div>
 
-    <img src="Hero Image.png" class="mx-4 md:p-10 ms:p-0 md:mx-20 w-full max-w-[1200px] h-auto" alt="Hero" />
-    <div class="w-full flex flex-col lg:flex-row justify-between items-start px-4 md:px-10 py-10 md:py-20">
+    <div class="w-full flex flex-col lg:flex-row justify-between items-start  md:px-10 py-10 md:py-20">
       <div class="w-full lg:w-[50%]">
-        <h1 class="text-4xl sm:text-5xl md:text-[60px] font-[400] leading-tight">
-          See the Big Picture
-        </h1>
+  <h1 class="text-4xl sm:text-5xl md:text-[60px] font-[400] leading-tight">
+    See the Big Picture
+  </h1>
 
-        <p class="text-[#6F6F6F] text-sm md:text-[15px] font-[400] mt-6 max-w-[420px]">
-          Area turns your data into clear, vibrant visuals that show you exactly
-          what's happening in each region.
-        </p>
+  <p class="text-[#6F6F6F] text-sm md:text-[15px] font-[400] mt-6 max-w-[420px]">
+    Area turns your data into clear, vibrant visuals that show you exactly
+    what's happening in each region.
+  </p>
 
-        <div class="mt-10 space-y-6 text-sm md:text-[15px]">
-          <hr />
-          <div class="flex gap-5">
-            <span class="text-gray-400">01</span>
-            <p>Spot Trends in Seconds: No more digging through numbers.</p>
-          </div>
-          <hr />
-          <div class="flex gap-5">
-            <span class="text-gray-400">02</span>
-            <p>
-              Get Everyone on the Same Page: Share easy-to-understand reports
-              with your team.
-            </p>
-          </div>
-          
-          <div class="flex gap-5">
-            <span class="text-gray-400">03</span>
-            <p>
-              Make Presentations Pop: Interactive maps and dashboards keep your
-              audience engaged.
-            </p>
-          </div>
-          <hr />
-          <div class="flex gap-5">
-            <span class="text-gray-400">04</span>
-            <p>
-              Your Global Snapshot: Get a quick, clear overview of your entire
-              operation.
+  <div class="mt-10 space-y-0 text-sm md:text-[15px]">
+    <hr />
+    
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item">
+      <button class="accordion-header w-full flex gap-5 py-6 text-left hover:bg-gray-50 transition-all duration-300">
+        <span class="accordion-number text-gray-400 transition-all duration-300 font-medium">01</span>
+        <div class="flex-1">
+          <p class="accordion-title transition-all duration-300">Spot Trends in Seconds: No more digging through numbers.</p>
+          <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+            <p class="text-[#6F6F6F] mt-3 leading-relaxed">
+              Our intuitive visualizations help you identify patterns and opportunities instantly. 
+              Transform complex datasets into clear insights that drive strategic decisions. 
+              Save valuable time and focus on what matters most—growing your business.
             </p>
           </div>
         </div>
+        <svg class="accordion-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <hr />
+    </div>
 
-        <button
-          class="mt-10 px-8 hover:bg-[#485C11] transition-colors hover:text-white py-3 bg-[#DDEEC3] rounded-full text-sm font-medium"
-        >
-          Discover More
-        </button>
-      </div>
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item">
+      <button class="accordion-header w-full flex gap-5 py-6 text-left hover:bg-gray-50 transition-all duration-300">
+        <span class="accordion-number text-gray-400 transition-all duration-300 font-medium">02</span>
+        <div class="flex-1">
+          <p class="accordion-title transition-all duration-300">Get Everyone on the Same Page: Share easy-to-understand reports with your team.</p>
+          <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+            <p class="text-[#6F6F6F] mt-3 leading-relaxed">
+              Collaborate effectively with visual data that everyone can interpret, regardless of technical expertise. 
+              Create a unified understanding across departments and enable better cross-functional alignment. 
+              Export and share reports in multiple formats for seamless team communication.
+            </p>
+          </div>
+        </div>
+        <svg class="accordion-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <hr />
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div class="accordion-item">
+      <button class="accordion-header w-full flex gap-5 py-6 text-left hover:bg-gray-50 transition-all duration-300">
+        <span class="accordion-number text-gray-400 transition-all duration-300 font-medium">03</span>
+        <div class="flex-1">
+          <p class="accordion-title transition-all duration-300">Make Presentations Pop: Interactive maps and dashboards keep your audience engaged.</p>
+          <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+            <p class="text-[#6F6F6F] mt-3 leading-relaxed">
+              Transform boring data presentations into compelling visual stories that captivate stakeholders. 
+              Use interactive elements to guide your audience through key insights and metrics. 
+              Build credibility with professional, dynamic visualizations that leave lasting impressions.
+            </p>
+          </div>
+        </div>
+        <svg class="accordion-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <hr />
+    </div>
+
+    <!-- Accordion Item 4 -->
+    <div class="accordion-item">
+      <button class="accordion-header w-full flex gap-5 py-6 text-left hover:bg-gray-50 transition-all duration-300">
+        <span class="accordion-number text-gray-400 transition-all duration-300 font-medium">04</span>
+        <div class="flex-1">
+          <p class="accordion-title transition-all duration-300">Your Global Snapshot: Get a quick, clear overview of your entire operation.</p>
+          <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+            <p class="text-[#6F6F6F] mt-3 leading-relaxed">
+              Monitor all regions simultaneously with comprehensive dashboards that provide actionable insights at a glance. 
+              Track performance metrics across multiple locations in real-time. 
+              Make informed decisions faster with a bird's-eye view of your global operations.
+            </p>
+          </div>
+        </div>
+        <svg class="accordion-icon w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <hr />
+    </div>
+  </div>
+
+  <button
+    class="mt-10 px-8 hover:bg-[#485C11] transition-colors hover:text-white py-3 bg-[#DDEEC3] rounded-full text-sm font-medium"
+  >
+    Discover More
+  </button>
+</div>
 
       <div class="w-full lg:w-[50%] flex justify-center lg:justify-end mt-10 lg:mt-0">
         <img
@@ -405,7 +376,7 @@
                 <span class="text-sm md:text-base text-gray-700">Partial UTF-8 support</span>
             </div>
         </div>
-   <div class="feature-box cursor-pointer transition-all duration-300 p-4 md:p-6 space-y-4 md:space-y-8 bg-gray-50 order-1">
+   <div class="feature-box cursor-pointer transition-all  duration-300 p-4 md:p-6 space-y-4 md:space-y-8 bg-gray-50 order-1">
  <h1 class="text-xl md:text-2xl font-bold ">WebSurge</h1>
  <hr>
             <div class="flex items-center gap-3">
@@ -445,7 +416,7 @@
 
 
     <section>
-      <div class="w-full flex flex-col lg:flex-row justify-between items-center px-6 md:px-10 py-20 gap-16">
+      <div class="w-full flex flex-col lg:flex-row justify-between items-center px-2 md:px-10 py-20 gap-16">
 
 <div class="w-full lg:w-1/2">
 <img class="w-full max-w-[590px] rounded-2xl object-cover shadow-[10px_10px_15px_#adb5bd]" src="Image.png">
@@ -465,40 +436,63 @@ I can't imagine running my company without it.”
 </div>
     
     </section>
+<div id="how-to"
+class="w-full flex flex-col lg:flex-row justify-between items-center px-6 md:px-10 py-20 gap-16 border-t border-b border-t-[#E9E9E9] border-b-[#E9E9E9]">
 
+<div class="w-full lg:w-1/2">
+<h1 class="text-[36px] md:text-[60px] font-[400]">Map Your Success</h1>
+</div>
 
-   <section class="grid grid-cols-1 md:mt-20 md:grid-cols-3 gap-10 px-4">
+<div class="w-full lg:w-1/2 flex justify-end">
+<button id="btn-4"
+class="px-8 py-3 bg-[#DDEEC3] rounded-full text-sm font-medium hover:bg-[#485C11] transition-colors hover:text-white">
+Discover More
+</button>
+</div>
 
-  <!-- Card 1 -->
-  <div class="text-center">
-    <h1 class="text-4xl text-gray-400">01</h1>
-    <h3 class="font-bold mt-4 text-lg">Get Started</h3>
-    <p class="text-gray-400 mt-3 text-sm">
-      With our intuitive setup, you're up and running in minutes.
-    </p>
-  </div>
+</div>
 
-  <!-- Card 2 -->
-  <div class="text-center">
-    <h1 class="text-4xl text-gray-400">02</h1>
-    <h3 class="font-bold mt-4 text-lg">Customize and Configure</h3>
-    <p class="text-gray-400 mt-3 text-sm">
-      Adapt Area to your specific requirements and preferences.
-    </p>
-  </div>
+ <section class="px-6 md:flex md:justify-evenly  py-24 max-w-6xl mx-auto space-y-20">
 
-  <!-- Card 3 -->
-  <div class="text-center  ">
-    <h1 class="text-4xl text-gray-400">03</h1>
-    <h3 class="font-bold mt-4 text-lg">Grow Your Business</h3>
-    <p class="text-gray-400 mt-3 text-sm">
-      Make informed decisions to exceed your goals.
-    </p>
-  </div>
+    <!-- Card 1 -->
+    <div class="card-row   text-center md:mt-24 rounded-xl hover:shadow-2xl transition-shadow duration-300">
+      <button class="animated-button">
+        01
+        <span class="hover-text" data-text="01">01</span>
+      </button>
+      <h3 class="card-title font-bold mt-6 text-xl text-gray-800">Get Started</h3>
+      <p class="card-text text-gray-400 mt-4 text-base leading-relaxed max-w-md mx-auto">
+        With our intuitive setup, you're up and running in minutes.
+      </p>
+    </div>
 
-</section>
+    <!-- Card 2 -->
+    <div class="card-row text-center p-8 rounded-xl hover:shadow-2xl transition-shadow duration-300">
+      <button class="animated-button">
+        02
+        <span class="hover-text" data-text="02">02</span>
+      </button>
+      <h3 class="card-title font-bold mt-6 text-xl text-gray-800">Customize and Configure</h3>
+      <p class="card-text text-gray-400 mt-4 text-base leading-relaxed max-w-md mx-auto">
+        Adapt Area to your specific requirements and preferences.
+      </p>
+    </div>
 
-    <img src="Hero image (1).png" class="mx-4  md:mt-20 overflow-hidden md:mx-20 transition duration-300 ease-in-out hover:scale-110 w-full max-w-[1200px] h-auto" alt="" />
+    <!-- Card 3 -->
+    <div class="card-row text-center p-8 rounded-xl hover:shadow-2xl transition-shadow duration-300">
+      <button class="animated-button">
+        03
+        <span class="hover-text" data-text="03">03</span>
+      </button>
+      <h3 class="card-title font-bold mt-6 text-xl text-gray-800">Grow Your Business</h3>
+      <p class="card-text text-gray-400 mt-4 text-base leading-relaxed max-w-md mx-auto">
+        Make informed decisions to exceed your goals.
+      </p>
+    </div>
+
+  </section>
+
+    <img src="Hero image (1).png" class="mx-4 sm:mx-0  md:mt-20 overflow-hidden md:mx-20 transition duration-300 ease-in-out hover:scale-110 w-full max-w-[1200px] h-auto" alt="" />
     <section>
       <h1 class="text-3xl sm:text-4xl md:text-5xl text-center mt-10 px-4">Connect with us</h1>
       <p class="text-center mt-5 md:mt-10 text-gray-400 text-sm md:text-base px-4">
@@ -527,6 +521,59 @@ I can't imagine running my company without it.”
 
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+  });
+     const cards = document.querySelectorAll('.card-row');
+
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, observerOptions);
+
+    cards.forEach(card => observer.observe(card));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('floatHeading');
+      if (!el) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            el.classList.add('in-view');
+          } else {
+            el.classList.remove('in-view');
+          }
+        });
+      }, {
+        threshold: 0.25 // adjust when it should trigger (0.25 = 25% visible)
+      });
+
+      observer.observe(el);
+    });
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+  
+  accordionHeaders.forEach((header) => {
+    header.addEventListener('click', () => {
+      const accordionItem = header.parentElement;
+      const isActive = accordionItem.classList.contains('active');
+      
+      // Close all accordion items
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // If clicked item wasn't active, open it
+      if (!isActive) {
+        accordionItem.classList.add('active');
+      }
+    });
   });
 </script>
 </html>
