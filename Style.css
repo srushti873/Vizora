@@ -348,3 +348,71 @@
     margin: 5%;
     margin-top: 1%;
   }
+
+   [data-animate] {
+    opacity: 0;
+    transform: translateY(18px) scale(0.995);
+    will-change: opacity, transform;
+  }
+
+  /* When in view */
+  .in-view {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  /* Smooth transition; uses CSS custom property for delay */
+  [data-animate] {
+    transition: opacity 600ms cubic-bezier(.2,.9,.2,1) var(--anim-delay, 0s),
+                transform 600ms cubic-bezier(.2,.9,.2,1) var(--anim-delay, 0s);
+  }
+
+  /* Optional: slightly larger effect for headlines */
+  [data-animate="fade-up"].headline {
+    transition-duration: 700ms;
+  }
+
+  /* Reduced motion fallback */
+  @media (prefers-reduced-motion: reduce) {
+    [data-animate] { transition: none !important; transform: none !important; opacity: 1 !important; }
+  }
+
+  .uiverse-btn {
+  padding: 12px 32px;
+  border-radius: 9999px;
+  background: #DDEEC3;
+  color: #485C11;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.uiverse-btn:hover {
+  background: #485C11;
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(72, 92, 17, 0.3);
+}
+
+.uiverse-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2px;
+  background: linear-gradient(45deg, #9fc769, #485C11);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.uiverse-btn:hover::after {
+  opacity: 1;
+}
