@@ -22,52 +22,50 @@
   <body class="bg-white overflow-x-hidden">
     
  
-<header class="flex  items-center fixed w-[100%] left-[0] top-[0] shadow-sm justify-between px-6 md:px-10 py-5  bg-white z-50">
-    
-    <h1 class="text-2xl md:text-3xl font-semibold">Vizora</h1>
+<header
+  class="flex items-center fixed w-full top-0 left-0 z-50
+         justify-between px-6 md:px-10 py-5
+         bg-white/60 backdrop-blur-md
+         shadow-sm border-b border-white/30"
+>
+  <h1 class="text-2xl md:text-3xl font-semibold text-black">
+    Vizora
+  </h1>
 
+  <nav class="hidden md:block">
+    <ul class="flex space-x-7 text-lg font-medium text-gray-800">
+      <li>
+        <a href="#benefits" class="hover:text-[#485C11] transition">
+          Benefits
+        </a>
+      </li>
+      <li>
+        <a href="#specifications" class="hover:text-[#485C11] transition">
+          Specifications
+        </a>
+      </li>
+      <li>
+        <a href="#howto" class="hover:text-[#485C11] transition">
+          How-to
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="hover:text-[#485C11] transition">
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-
- <nav class="hidden md:block">
-  <ul class="flex space-x-7 text-lg font-medium text-gray-700">
-    
-    <li>
-      <a href="#benefits" class="hover:text-[#485C11] transition-all cursor-pointer">
-        Benefits
-      </a>
-    </li>
-
-    <li>
-      <a href="#specifications" class="hover:text-[#485C11] transition-all cursor-pointer">
-        Specifications
-      </a>
-    </li>
-
-    <li>
-      <a href="#howto" class="hover:text-[#485C11] transition-all cursor-pointer">
-        How-to
-      </a>
-    </li>
-
-    <li>
-      <a href="#contact" class="hover:text-[#485C11] transition-all cursor-pointer">
-        Contact Us
-      </a>
-    </li>
-
-  </ul>
-</nav>
-
-
-  <!-- <button class="hidden md:block bg-[#485C11] text-white text-sm px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+  <button class="button2 bg-[#DFECC6] hidden md:block rounded-full text-black px-6 py-3">
     Learn More
-  </button> -->
-<button class="button2 bg-[#DFECC6] hidden md:block  rounded-full text-black">  Learn More</button>
-  <button id="menuBtn" class="md:hidden text-3xl focus:outline-none">
-<i class="bi bi-list"></i>
   </button>
 
+  <button id="menuBtn" class="md:hidden text-3xl text-black focus:outline-none">
+    <i class="bi bi-list"></i>
+  </button>
 </header>
+
 
 <div id="mobileMenu" class="hidden flex flex-col bg-white shadow-lg border-t px-6 py-6 space-y-6 text-lg font-medium text-gray-700 animate-slideDown">
   <a class="hover:text-[#485C11] transition cursor-pointer">Benefits</a>
@@ -527,7 +525,7 @@ class="w-full flex flex-col lg:flex-row justify-between items-center px-6 md:px-
 
   </section>
 
-    <img src="Hero image (1).png" class="   md:mt-20 overflow-hidden  transition duration-300 ease-in-out hover:scale-110 w-full max-w-[1500px] h-auto" alt="" />
+    <img src="Hero image (1).png" class="   md:mt-20 overflow-hidden  transition duration-300 ease-in-out hover:scale-110 w-full  h-auto" alt="" />
     <section>
       <h1 class="text-3xl sm:text-4xl md:text-5xl text-center mt-10 px-4">Connect with us</h1>
       <p class="text-center mt-5 md:mt-10 text-gray-400 text-sm md:text-base px-4">
